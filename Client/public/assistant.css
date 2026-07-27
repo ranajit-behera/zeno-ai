@@ -1,0 +1,685 @@
+/* =========================================
+   TOGGLE BUTTON
+========================================= */
+
+.zeno-btn {
+  position: fixed;
+
+  right: 16px;
+  bottom: 16px;
+
+  width: 58px;
+  height: 58px;
+
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  z-index: 999999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  transition: 0.3s;
+}
+
+.zeno-btn img {
+  width: 30px;
+  height: 30px;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+}
+
+/* =========================================
+   POPUP
+========================================= */
+
+.zeno-popup {
+  position: fixed;
+
+  right: 16px;
+  bottom: 84px;
+
+  width: 280px;
+  min-width: 280px;
+  max-width: 280px;
+
+  height: 440px;
+  min-height: 440px;
+  max-height: 440px;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  z-index: 999999;
+
+  display: none;
+
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.32);
+}
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.zeno-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.zeno-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 12px 14px 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+/* =========================================
+   TOP
+========================================= */
+
+.zeno-top {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/* =========================================
+   ORB
+========================================= */
+
+.zeno-orb-wrap {
+  position: relative;
+
+  width: 82px;
+  height: 82px;
+
+  margin-top: 2px;
+}
+
+.zeno-orb-glow {
+  position: absolute;
+
+  inset: 0;
+
+  transform: scale(1.7);
+
+  border-radius: 999px;
+
+  filter: blur(48px);
+
+  opacity: 0.6;
+}
+
+.zeno-orb {
+  position: relative;
+
+  width: 82px;
+  height: 82px;
+
+  border-radius: 999px;
+
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.zeno-title {
+  margin-top: 10px;
+
+  font-size: 21px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.zeno-sub {
+  margin-top: 6px;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+
+  text-align: center;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.zeno-status {
+  margin-top: 12px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+/* =========================================
+   WAVE
+========================================= */
+
+.zeno-wave {
+  margin-top: 5px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 3px;
+
+  height: 24px;
+
+  opacity: 0;
+
+  transition: 0.3s;
+}
+
+.zeno-wave:active {
+  opacity: 1;
+}
+
+.zeno-wave span {
+  width: 3px;
+
+  border-radius: 999px;
+
+  transform-origin: bottom;
+
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+.zeno-wave span:nth-child(1) {
+  height: 10px;
+}
+
+.zeno-wave span:nth-child(2) {
+  height: 20px;
+}
+
+.zeno-wave span:nth-child(3) {
+  height: 12px;
+}
+
+.zeno-wave span:nth-child(4) {
+  height: 24px;
+}
+
+.zeno-wave span:nth-child(5) {
+  height: 15px;
+}
+
+.zeno-wave span:nth-child(6) {
+  height: 8px;
+}
+
+@keyframes wave {
+  0% {
+    opacity: 0.4;
+    transform: scaleY(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1.2);
+  }
+
+  100% {
+    opacity: 0.4;
+    transform: scaleY(0.8);
+  }
+}
+
+/* =========================================
+   USER TEXT
+========================================= */
+
+.zeno-user-text {
+  margin-top: 6px;
+
+  min-height: 16px;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+
+  text-align: center;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   AI TEXT
+========================================= */
+
+.zeno-ai-text {
+  margin-top: 2px;
+
+  min-height: 14px;
+
+  font-size: 11px;
+
+  line-height: 1.3;
+
+  text-align: center;
+
+  opacity: 0.82;
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.zeno-bottom {
+  position: relative;
+
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+   MIC BUTTON
+========================================= */
+
+.zeno-mic {
+  position: relative;
+
+  z-index: 2;
+
+  width: 56px;
+  height: 56px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-size: 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+
+  animation: micFloat 2.5s infinite ease-in-out;
+}
+
+.zeno-mic:hover {
+  transform: scale(1.06);
+}
+
+@keyframes micFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.zeno-mic-icon {
+  width: 23px;
+  height: 23px;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+.theme-dark {
+  background: #050816;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.theme-dark .zeno-overlay {
+  background: radial-gradient(
+    circle at top,
+
+    rgba(168, 85, 247, 0.18),
+    transparent 45%
+  );
+}
+
+.theme-dark .zeno-orb,
+.theme-dark .zeno-orb-glow {
+  background: linear-gradient(135deg, #4cc9ff, #7c3aed, #ec4899);
+}
+
+.theme-dark .zeno-title {
+  color: white;
+}
+
+.theme-dark .zeno-sub {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.theme-dark .zeno-status {
+  color: #22e3a6;
+}
+
+.theme-dark .zeno-wave span {
+  background: #22e3a6;
+}
+
+.theme-dark .zeno-user-text {
+  color: white;
+}
+
+.theme-dark .zeno-ai-text {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* =========================================
+   DARK THEME BUTTONS
+========================================= */
+
+.theme-dark .zeno-mic,
+.theme-dark.zeno-btn {
+  background: linear-gradient(135deg, #7c3aed, #4f8cff);
+
+  box-shadow:
+    0 0 25px rgba(124, 58, 237, 0.55),
+    0 0 60px rgba(79, 140, 255, 0.38),
+    0 0 90px rgba(124, 58, 237, 0.22);
+}
+
+
+/* =========================================
+   LIGHT THEME
+========================================= */
+
+.theme-light {
+  background: linear-gradient(135deg, #ffffff, #eef6ff);
+
+  border: 1px solid #dbeafe;
+}
+
+.theme-light .zeno-overlay {
+  background: radial-gradient(
+    circle at top,
+
+    rgba(59, 130, 246, 0.12),
+    transparent 45%
+  );
+}
+
+.theme-light .zeno-orb,
+.theme-light .zeno-orb-glow {
+  background: linear-gradient(135deg, #7dd3fc, #67e8f9, #f5d0fe);
+}
+
+.theme-light .zeno-title {
+  color: #081028;
+}
+
+.theme-light .zeno-sub {
+  color: #475569;
+}
+
+.theme-light .zeno-status {
+  color: #3b82f6;
+}
+
+.theme-light .zeno-wave span {
+  background: #60a5fa;
+}
+
+.theme-light .zeno-user-text {
+  color: #081028;
+}
+
+.theme-light .zeno-ai-text {
+  color: #475569;
+}
+
+/* =========================================
+   LIGHT THEME BUTTONS
+========================================= */
+
+.theme-light .zeno-mic,
+.theme-light.zeno-btn {
+  background: linear-gradient(135deg, #60a5fa, #06b6d4);
+
+  box-shadow:
+    0 0 30px rgba(59, 130, 246, 0.38),
+    0 0 85px rgba(6, 182, 212, 0.28),
+    0 0 130px rgba(59, 130, 246, 0.16);
+}
+
+
+/* =========================================
+   GLASS THEME
+========================================= */
+
+.theme-glass {
+  background: rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(45px);
+
+  -webkit-backdrop-filter: blur(45px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.theme-glass .zeno-overlay {
+  background: radial-gradient(
+    circle at top,
+
+    rgba(255, 255, 255, 0.05),
+    /* transparent 45% */
+  );
+}
+
+.theme-glass .zeno-orb,
+.theme-glass .zeno-orb-glow {
+  background: linear-gradient(135deg, #bae6fd, #c4b5fd, #f5d0fe);
+}
+
+.theme-glass .zeno-title {
+  color: white;
+}
+
+.theme-glass .zeno-sub {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.theme-glass .zeno-status {
+  color: #a5f3fc;
+}
+
+.theme-glass .zeno-wave span {
+  background: #a5f3fc;
+}
+
+.theme-glass .zeno-user-text {
+  color: white;
+}
+
+.theme-glass .zeno-ai-text {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* =========================================
+   GLASS THEME BUTTONS
+========================================= */
+
+.theme-glass .zeno-mic,
+.theme-glass.zeno-btn {
+  background: linear-gradient(135deg, #38bff8a3, #8a5cf6a8);
+
+  /* Frosted neon glow */
+  box-shadow:
+    0 0 35px rgba(34, 211, 238, 0.34),
+    0 0 95px rgba(139, 92, 246, 0.28),
+    0 0 150px rgba(56, 189, 248, 0.18);
+}
+
+
+/* =========================================
+   NEON THEME
+========================================= */
+
+.theme-neon {
+  background: #03120d;
+
+  border: 1px solid rgba(16, 185, 129, 0.18);
+}
+
+.theme-neon .zeno-overlay {
+  background: radial-gradient(
+    circle at top,
+
+    rgba(16, 185, 129, 0.18),
+    transparent 45%
+  );
+}
+
+.theme-neon .zeno-orb,
+.theme-neon .zeno-orb-glow {
+  background: linear-gradient(135deg, #34d399, #10b981, #14b8ae);
+}
+
+.theme-neon .zeno-title {
+  color: #ecfdf5;
+}
+
+.theme-neon .zeno-sub {
+  color: rgba(209,250,229,0.72);
+}
+
+.theme-neon .zeno-status {
+  color: #6ee7b7;
+}
+
+.theme-neon .zeno-wave span {
+  background: #6ee7b7;
+}
+
+.theme-neon .zeno-user-text {
+  color: #ecfdf5;
+}
+
+.theme-neon .zeno-ai-text {
+  color: rgba(209,250,229,0.75);
+}
+
+/* =========================================
+   NEON THEME BUTTONS
+========================================= */
+
+.theme-neon .zeno-mic,
+.theme-neon.zeno-btn {
+  background: linear-gradient(135deg, #10b981, #22c55e);
+
+  /* Strong neon glow */
+  box-shadow:
+    0 0 38px rgba(16, 185, 129, 0.45),
+    0 0 100px rgba(34,197,94,0.32),
+    0 0 160px rgba(16, 185, 129, 0.20);
+}
+
+
+@media(max-width: 640px) {
+  .zeno-popup {
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+
+    height: 420px;
+    min-height: 420px;
+    max-height: 420px;
+
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 76px;
+
+    border-radius: 24px;
+  }
+
+  .zeno-btn{
+    right: 12px;
+    bottom: 12px;
+
+    width: 54px;
+    height: 54px;
+  }
+
+  .zeno-btn img{
+    width: 26px;
+    height: 26px;
+  }
+  .zeno-title{
+    font-size: 19px;
+  }
+  .zeno-sub{
+    font-size: 11px;
+  }
+}

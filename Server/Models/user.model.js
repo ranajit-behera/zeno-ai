@@ -66,7 +66,7 @@ const userSchema = new mongoose.Schema({
     },
     geminiStatus: {
         type: String,
-        enum: ["active", " quota_exceed", "invalid"],
+        enum: ["active", "quota_exceeded", "invalid"],
         default: "active"
     },
     totalMessages: {
@@ -97,4 +97,4 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-export default User;
+export default User; 
