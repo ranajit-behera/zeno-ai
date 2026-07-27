@@ -62,11 +62,11 @@ export const askAssistant = async (req, res) => {
             // Navigation Commands or User start speak with these words
             const navigationWords = [
                 "open",
-                "go",
+                "go to",
                 "start",
                 "show",
                 "navigate",
-                "take me",
+                "take me to",
             ]
 
             // Check navigation intent : want to 'Navigate' or 'Not'
@@ -76,13 +76,14 @@ export const askAssistant = async (req, res) => {
                     cleanMessage.startsWith(word)
                 );
 
+
             // If User wants navigation
             if (wantsNavigation) {
 
                 // Find matching page
                 const matchedPage =
-                    user.pages.find((page) =>
-                        page.keywords.some((keyword) =>
+                    user.pages.find((page) =>{
+                        const matched = page.keywords.some((keyword) =>
                             //check if any keyword, include inside cleanMessage
                             cleanMessage.includes(
                                 keyword.toLowerCase().trim()
@@ -90,8 +91,8 @@ export const askAssistant = async (req, res) => {
 
 
                         )
-
-                    );
+                        return matched;
+                    });
 
                 // Page found
                 if (matchedPage) {

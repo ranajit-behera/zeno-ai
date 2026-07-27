@@ -58,7 +58,7 @@ const App = () => {
                   path="/builder"
                   element={<Builder user={user} setUser={setUser} />}
                 />
-                <Route path="/billing" element={<Billing user={user} />} />
+                <Route path="/billing" element={<Billing user={user} setUser={setUser}/>} />
 
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
