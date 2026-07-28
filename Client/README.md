@@ -1,16 +1,34 @@
-# React + Vite
+# Zeno AI - Frontend Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This directory contains the React 19 + Vite frontend application for **Zeno AI**.
 
-Currently, two official plugins are available:
+For full project documentation, setup guides, architecture, and API endpoints, please refer to the [Root README](../README.md).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧰 Tech Stack
+- **Framework**: React 19 + Vite
+- **Styling**: Tailwind CSS v4
+- **Routing**: React Router v7
+- **Auth**: Firebase Authentication (Google OAuth & Email/Password)
+- **HTTP Client**: Axios with credentials support
+- **UI Components**: React Hot Toast, React Icons
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. Configure environment variables (`.env`):
+   ```env
+   VITE_FIREBASE_API_KEY=your_firebase_api_key
+   VITE_SERVER_URL=http://localhost:8080
+   VITE_CLIENT_URL=http://localhost:5173
+   VITE_RAZORPAY_KEY_ID=your_razorpay_key_id
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Start development server:
+   ```bash
+   npm run dev
+   ```
+
