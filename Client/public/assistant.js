@@ -16,7 +16,7 @@
 
   const link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = "http://localhost:5173/assistant.css";
+  link.href = "https://zeno-ai-olxc.onrender.com/assistant.css";
 
   // Add the css link
   document.head.appendChild(link);
@@ -75,7 +75,7 @@
         <div class ='zeno-bottom'>
             <button class='zeno-mic'>
                 <img
-                    src='http://localhost:5173/mic.svg'
+                    src='https://zeno-ai-olxc.onrender.com/mic.svg'
                     alt="mic"
                     class="zeno-mic-icon"
                 />
@@ -94,7 +94,7 @@
 
   button.innerHTML = `
       <img
-        src ="http://localhost:5173/logo.png"
+        src ="https://zeno-ai-olxc.onrender.com/logo.png"
         alt="logo"
       />
     `;
@@ -115,7 +115,7 @@
 
   const loadAssistant = async () => {
     try {
-      const res = await fetch(`http://localhost:8080/api/assistant/config/${userId}`)
+      const res = await fetch(`https://zeno-ai-server.onrender.com/api/assistant/config/${userId}`)
 
       const data = await res.json();
       // console.log(data)
@@ -229,7 +229,7 @@
           status.textContent = "Thinking...";
 
           // Fetching assistant-Response
-          const res = await fetch("http://localhost:8080/api/assistant/ask", {
+          const res = await fetch("https://zeno-ai-server.onrender.com/api/assistant/ask", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
