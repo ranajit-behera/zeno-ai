@@ -94,7 +94,7 @@
 
   button.innerHTML = `
       <img
-        src ="https://zeno-ai-olxc.onrender.com/logo.png"
+        src ="https://zeno-ai-olxc.onrender.com/favicon.svg"
         alt="logo"
       />
     `;
