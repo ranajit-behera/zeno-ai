@@ -49,7 +49,7 @@ const Login = ({setUser}) => {
       );
 
       // Setuser using Props
-      setUser(res.data);
+      setUser(res.data.user);
 
       // Toast for success message
       toast.success("Login successfully");
